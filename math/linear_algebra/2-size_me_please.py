@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-'''
-    def matrix_shape(matrix) calculates the shape of a matrix
-'''
+"""Module that defines matrix_shape."""
 
 
 def matrix_shape(matrix):
+    """Calculate the shape of a matrix."""
+    shape = []
 
-    mat_shape = []
     while isinstance(matrix, list):
-        mat_shape.append(len(matrix))
+        shape.append(len(matrix))
+        if len(matrix) == 0:
+            break
         matrix = matrix[0]
-    return mat_shapie
+
+    return shape
